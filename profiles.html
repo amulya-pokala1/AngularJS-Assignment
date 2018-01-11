@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+   
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css"></link>
+     <script src="app.js"></script>
+</head>
+
+<body>
+    <div ng-app="GetCall">
+        <div ng-controller="getCallController">
+            
+               <tr>
+                    <th>Name</th> <th>Friends</th>  <th>About</th>
+                    </tr>
+                    <div ng-repeat="profile in profiles">
+                    <tr>
+                            <td>{{profile.profile_name}}</td>
+                            <td>{{profile.noOfFriends}}</td>
+                            <td>{{profile.about}}</td>
+                            <button type="submit" class="btn btn-lg btn-danger" ng-click="del(profile.profile_name)">Delete Profile</button>
+                            <a href="#update">Update profile</a>
+
+                            <div ng-view></div>
+                            
+                        </tr>
+                    </div>
+                   
+                            
+                
+                        
+                    
+              
+        </div>
+
+    </div>
+</body>
+</html>
